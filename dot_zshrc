@@ -1,12 +1,16 @@
+
+# set alias for exa
+
 alias ll='ls -alB'
 
-if  hash exa 2&>/dev/null ; then
+if  hash exa 2skip&>/dev/null ; then
     alias ls='exa --group-directories-first -B1 --classify --header --time-style=long-iso'
     alias lg='ll --git'
     alias lt='ll --tree'
     alias lgt='ll --git --tree'
     alias ltg='lgt'
 fi
+
 
 # ZSH-Completetions - should be removed if installed as ohmyzsh plugin later
 
@@ -22,8 +26,8 @@ fi
 # ASDF
 
 . $(brew --prefix asdf)/asdf.sh
-
 . ~/.asdf/plugins/java/set-java-home.zsh
+
 export ASDF_DATA_DIR=~/.asdf
 # ln -s ~/.asdf ~/asdf
 
@@ -34,6 +38,5 @@ export PATH=$PATH:$HOME/Library/Application\ Support/JetBrains/Toolbox/scripts/
 
 
 # add thefuck 
-
 
 eval $(thefuck --alias)
