@@ -3,7 +3,7 @@
 
 alias ll='ls -alB'
 
-if  hash exa 2skip&>/dev/null ; then
+if  hash exa 2&>/dev/null ; then
     alias ls='exa --group-directories-first -B1 --classify --header --time-style=long-iso'
     alias lg='ll --git'
     alias lt='ll --tree'
